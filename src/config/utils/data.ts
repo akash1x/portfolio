@@ -5,7 +5,7 @@ import {
   HeaderData,
   Project,
   Skill,
-} from "../../features/Homepage/types/types";
+} from "../../features/Homepage/types";
 import profileImage from "../../assets/profile.svg";
 
 export const headerData: HeaderData = {

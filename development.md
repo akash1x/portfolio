@@ -23,12 +23,16 @@
   - **Sections**: `Header`, `About`, `Experience`, `Education`, `Skills`, `Projects`, `Contact`.
   - **Components**: Reusable UI parts moved to `features/Homepage/components`.
   - **Hooks**: `features/Homepage/hooks`.
-  - **Types**: `src/features/Homepage/types`.
+  - **Types**: moved to `src/features/Homepage/types.ts` (was `types/types.ts`).
 - **TypeScript Migration**:
   - Renamed `App.jsx` to `App.tsx`.
   - Added `src/config/utils`.
 
-## Configuration Changes
+## Styling & Configuration
 
+- **Tailwind CSS**:
+  - Integrated `tailwindcss` via `@tailwindcss/vite` plugin.
+  - Created `src/App.css` with `@import "tailwindcss";`.
+  - Added Tailwind classes to `App.tsx` and `Header.tsx`.
 - **Assets**: Added `src/assets/profile.svg` placeholder.
 - **Removed Config**: Deleted `tsconfig.json` and `src/vite-env.d.ts` (Project may need TS reconfiguration).

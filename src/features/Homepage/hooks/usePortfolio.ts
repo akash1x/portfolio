@@ -15,7 +15,7 @@ import {
   HeaderData,
   Project,
   Skill,
-} from "../types/types";
+} from "../types";
 
 export const usePortfolio = () => {
   // Simulating data fetching or just returning static data

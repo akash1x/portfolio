@@ -1,4 +1,4 @@
-import { Experience } from "../types/types";
+import { Experience } from "../types";
 
 interface CompanyCardProps {
   experience: Experience;

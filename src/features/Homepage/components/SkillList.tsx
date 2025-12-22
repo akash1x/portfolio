@@ -1,4 +1,4 @@
-import { Skill } from "../types/types";
+import { Skill } from "../types";
 
 interface SkillListProps {
   skills: Skill[];
