@@ -12,17 +12,21 @@
 - **Removed Boilerplate**: Deleted `App.css`, `index.css`, and default assets.
 - **Refactoring**: Simplified `App.jsx`.
 
-## Components Implementation
+## Components Implementation (Old)
 
-- **Layout**:
-  - `Header`: Profile image and navigation.
-  - `About`: Introduction and professional summary.
-  - `Education`: Educational background (`EducationCard`).
-  - `Experience`: Work history (`Company`, `CompanyWorkExperience`).
-  - `Skills`: Technical proficiency list.
-  - `Projects`: Project showcase placeholder.
-  - `Contact`: Contact section placeholder.
-- **Composition**: Updated `App.jsx` to render all new sections.
+- **Status**: Replaced by Feature-based architecture.
+- **Legacy Components**: Was flat structure in `src/components`, now deleted.
+
+## Architecture Refactor (Feature-based)
+
+- **New Structure**: `src/features/Homepage`
+  - **Sections**: `Header`, `About`, `Experience`, `Education`, `Skills`, `Projects`, `Contact`.
+  - **Components**: Reusable UI parts moved to `features/Homepage/components`.
+  - **Hooks**: `features/Homepage/hooks`.
+  - **Types**: `src/features/Homepage/types`.
+- **TypeScript Migration**:
+  - Renamed `App.jsx` to `App.tsx`.
+  - Added `src/config/utils`.
 
 ## Configuration Changes
 
