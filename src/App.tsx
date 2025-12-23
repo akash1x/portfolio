@@ -8,7 +8,7 @@ import Skills from "./features/Homepage/sections/Skills";
 import "./App.css";
 function App() {
   return (
-    <div className="flex flex-col max-w-[1200px] mx-auto">
+    <div className="flex flex-col max-w-[1200px] mx-auto gap-10">
       <Header />
       <About />
       <Experience />

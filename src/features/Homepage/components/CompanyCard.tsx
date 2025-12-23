@@ -9,8 +9,6 @@ const CompanyCard = ({ experience }: CompanyCardProps) => {
     <div>
       <h2>{experience.role}</h2>
       <p>{experience.company}</p>
-      <p>{experience.period}</p>
-      <p>{experience.description}</p>
     </div>
   );
 };

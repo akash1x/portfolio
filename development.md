@@ -36,3 +36,13 @@
   - Added Tailwind classes to `App.tsx` and `Header.tsx`.
 - **Assets**: Added `src/assets/profile.svg` placeholder.
 - **Removed Config**: Deleted `tsconfig.json` and `src/vite-env.d.ts` (Project may need TS reconfiguration).
+
+## UI Enhancements & Content Updates
+
+- **Homepage Sections**:
+  - **About**: Redesigned with profile image, social buttons, and bio points.
+  - **Education**: Implemented timeline layout.
+  - **Experience**: Added `DetailedCompanyCard` for selected experience.
+  - **Projects**: Updated layout grid.
+- **Assets**: Replaced `profile.svg` with `profile.png`.
+- **Data**: Updated `HeaderData` and `AboutData` structures in types.

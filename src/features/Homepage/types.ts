@@ -6,7 +6,7 @@ export interface Experience {
   role: string;
   company: string;
   period: string;
-  description: string;
+  description: string[];
 }
 
 export interface Education {
@@ -20,6 +20,7 @@ export interface Project {
   description: string;
   technologies?: string[];
   link?: string;
+  image?: string;
 }
 
 export interface AboutData {
@@ -27,7 +28,10 @@ export interface AboutData {
   title: string;
   welcomeMessage: string;
   introductionTitle: string;
-  bioPoints: string[];
+  bioPoints: {
+    emoji: string;
+    description: string;
+  }[];
 }
 
 export interface HeaderData {

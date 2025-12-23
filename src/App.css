@@ -1,1 +1,21 @@
 @import "tailwindcss";
+
+@layer base {
+  html {
+    color: white;
+    background-color: var(--color-purple-main-bg);
+    opacity: 0.95;
+  }
+  h3 {
+    @apply text-2xl;
+  }
+
+  h1 {
+    @apply font-bold text-6xl;
+  }
+}
+
+@theme {
+  --color-purple-bg: rgb(29, 24, 54);
+  --color-purple-main-bg: rgb(5, 8, 22);
+}

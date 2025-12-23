@@ -6,10 +6,9 @@ interface EducationCardProps {
 
 const EducationCard = ({ education }: EducationCardProps) => {
   return (
-    <div>
-      <h2>{education.degree}</h2>
-      <p>{education.institution}</p>
-      <p>{education.period}</p>
+    <div className="bg-purple-bg px-4 py-6">
+      <p className="font-bold font-xl">{education.degree}</p>
+      <p className="font-bold font-xl">{education.institution}</p>
     </div>
   );
 };
