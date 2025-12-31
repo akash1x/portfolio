@@ -56,3 +56,9 @@
   - **Experience**: Added interactive selection state.
   - **Skills**: Implemented hexagon grid layout.
 - **Content**: Updated resume and project details in `data.ts`.
+
+## Deployment & CI/CD
+
+- **Firebase Hosting**:
+  - Configured via `firebase.json` and `.firebaserc`.
+  - Setup GitHub Action `firebase-hosting-pull-request.yml` for preview channels on PR.
