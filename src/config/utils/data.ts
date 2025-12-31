@@ -12,9 +12,10 @@ export const headerData: HeaderData = {
   name: "Akash Dohare",
   navItems: [
     "Home",
+    "About",
+    "Experience",
     "Education",
     "Skills",
-    "Experience",
     "Projects",
     "Contact",
   ],
@@ -22,118 +23,127 @@ export const headerData: HeaderData = {
 
 export const aboutData: AboutData = {
   name: "Akash Dohare",
-  title: "Software Engineer",
+  title: "Senior Software Engineer",
   welcomeMessage:
-    "Welcome to my portfolio,please scroll down to know more about me",
-  introductionTitle: "Introduction",
+    "Full-stack developer with 5+ years of experience building scalable backend systems and rich frontend interfaces.",
+  introductionTitle: "/ about me",
   bioPoints: [
     {
       emoji: "👨‍💻",
       description:
-        "I'm a Software Engineer with over 4 years of experience in software development and cloud technologies.",
+        "Senior Software Engineer with 5+ years of experience in building scalable backend systems and rich frontend interfaces.",
     },
     {
-      emoji: "🎓",
+      emoji: "🚀",
       description:
-        "Currently working toward my Honours Bachelor of Science in Computer Science at Ontario Tech University, I'm all about building reliable, scalable software that makes a difference.",
+        "Proven track record of optimizing system performance, leading code quality initiatives, and delivering client-facing modules used by 50,000+ users.",
     },
     {
       emoji: "🛠",
       description:
-        "From full-stack development to cloud-based solutions, I've led enterprise-level projects that streamline operations and deliver real impact.",
+        "Experienced in React, NestJS, AWS, Azure, and upgrading legacy systems to modern tech stacks.",
     },
     {
-      emoji: "🔧",
+      emoji: "🤝",
       description:
-        "I enjoy automating workflows, optimizing systems, and turning complex challenges into real results. 📈",
+        "Strong problem solver with experience in team mentoring and cross-functional collaboration.",
     },
     {
-      emoji: "📈",
+      emoji: "🏆",
       description:
-        "I'm always learning and exploring new technologies to stay ahead of the curve. 📈",
+        "Awarded Persistent's Prize for outstanding performance in the Smart India Hackathon - 2018.",
     },
   ],
 };
 
 export const experienceData: Experience[] = [
   {
-    role: "Software Engineer",
+    role: "Senior Software Engineer",
     company: "Deqode",
-    period: "2022-2025",
+    period: "May 2022 - Present",
     description: [
-      "Provisioned Windows PCs with MDT, and deployed scripting via PowerShell and ConnectWise.",
-      "Managed AD accounts to propagate ACLs and unified access across in-house apps, Exchange, and SharePoint.",
-      "Configured Cisco CUCM, Unity, and Finesse for stable call routing and voicemail services.",
-      "Handled switch patching and VLAN/routing via PuTTY & SecureCRT, ensuring stable network performance.",
-      "Deployed Oracle POS/KDS/Debit solutions (EMC, Simphony), tracking updates in Jira & Confluence.",
+      "Developed and maintained full-stack Web3 and fintech applications using NestJS, TypeORM, ReactJS, and PostgreSQL.",
+      "Collaborated with designers and product teams to deliver 5+ client-facing modules with a combined user base of 50,000+ users.",
+      "Led integration of secure payment systems (Trustpay/Praxis), achieving 99.99% success rate.",
+      "Mentored 3+ junior developers through pair programming, PR reviews, and architectural discussions.",
+      "Optimized PostgreSQL database schemas and queries, resulting in 30% faster query execution.",
     ],
   },
-
   {
-    role: "Software Engineer",
-    company: "Deqode",
-    period: "2022-2025",
+    role: "Research Engineer",
+    company: "LG Soft India",
+    period: "Mar 2020 - May 2022",
     description: [
-      "Provisioned Windows PCs with MDT, and deployed scripting via PowerShell and ConnectWise.",
-      "Managed AD accounts to propagate ACLs and unified access across in-house apps, Exchange, and SharePoint.",
-      "Configured Cisco CUCM, Unity, and Finesse for stable call routing and voicemail services.",
-      "Handled switch patching and VLAN/routing via PuTTY & SecureCRT, ensuring stable network performance.",
-      "Deployed Oracle POS/KDS/Debit solutions (EMC, Simphony), tracking updates in Jira & Confluence.",
-    ],
-  },
-
-  {
-    role: "Software Engineer",
-    company: "Deqode",
-    period: "2022-2025",
-    description: [
-      "Provisioned Windows PCs with MDT, and deployed scripting via PowerShell and ConnectWise.",
-      "Managed AD accounts to propagate ACLs and unified access across in-house apps, Exchange, and SharePoint.",
-      "Configured Cisco CUCM, Unity, and Finesse for stable call routing and voicemail services.",
-      "Handled switch patching and VLAN/routing via PuTTY & SecureCRT, ensuring stable network performance.",
-      "Deployed Oracle POS/KDS/Debit solutions (EMC, Simphony), tracking updates in Jira & Confluence.",
+      "Spearheaded upgrade of LG Audio Recorder and File Manager apps to latest Android APIs (Android 10 to 12) for 10M+ global users.",
+      "Fixed over 200+ issues related to system compatibility and OS behavior changes using ADB log analysis.",
+      "Increased app crash-free sessions by 25%.",
+      "Documented upgrade procedures and collaborated across India-Korea teams for OS compliance transitions.",
     ],
   },
 ];
 
 export const educationData: Education[] = [
   {
-    degree: "Bachelor of Science in Computer Science",
-    institution: "JSS Academy of Technical Education",
-    period: "2014-2018",
+    degree: "Post Graduate Diploma In Advance Computing",
+    institution: "CDAC, Pune",
+    period: "08/2019 - 02/2020",
   },
   {
-    degree: "Bachelor of Science in Computer Science",
-    institution: "JSS Academy of Technical Education",
-    period: "2014-2018",
+    degree: "B.Tech Computer Science And Engineering",
+    institution: "JSS Academy Of Technical Education, Noida",
+    period: "08/2014 - 08/2018",
+  },
+  {
+    degree: "12th Standard (Higher Secondary)",
+    institution: "Kendriya Vidyalaya, Lucknow",
+    period: "03/2013 - 03/2014",
+  },
+  {
+    degree: "10th Standard (Secondary)",
+    institution: "Kendriya Vidyalaya, Lucknow",
+    period: "03/2011 - 03/2012",
   },
 ];
 
 export const skillsData: Skill[] = [
-  { name: "React" },
-  { name: "Node.js" },
-  { name: "Express.js" },
-  { name: "Python" },
+  { name: "React JS" },
+  { name: "Nest JS" },
+  { name: "Node JS" },
+  { name: "TypeScript" },
   { name: "JavaScript" },
-  { name: "HTML" },
-  { name: "CSS" },
+  { name: "AWS" },
+  { name: "Azure" },
+  { name: "PostgreSQL" },
+  { name: "MongoDB" },
+  { name: "Docker" },
+  { name: "Java Core" },
+  { name: "C++" },
 ];
 
 export const projectsData: Project[] = [
   {
-    title: "Project 1",
-    description: "Project description placeholder.",
-    technologies: ["React", "TypeScript"],
-    link: "https://github.com/username/project1",
-    image: "https://placehold.co/600x400/png",
+    title: "Blinkplanet",
+    description:
+      "Web3/Fintech platform. Integrated secure fiat payment gateways and optimized DB schemas.",
+    technologies: ["NestJS", "ReactJS", "Web3", "AWS", "Postgres"],
+    link: "https://www.blinkplanet.com/",
+    image: "https://placehold.co/600x400/png?text=Blinkplanet",
   },
-
   {
-    title: "Project 1",
-    description: "Project description placeholder.ddd",
-    technologies: ["React", "TypeScript"],
-    link: "https://github.com/username/project1",
-    image: "https://placehold.co/600x400/png",
+    title: "Employee Handbook",
+    description:
+      "Scalable platform for employee onboarding used by 500+ small businesses.",
+    technologies: ["NodeJS", "ReactJS", "Contentful CMS", "Azure"],
+    link: "https://smallbusiness.wsps.ca/safety-orientation-handbook/",
+    image: "https://placehold.co/600x400/png?text=Employee+Handbook",
+  },
+  {
+    title: "WSPS",
+    description:
+      "Production web app upgrade and backend migration to Azure Functions.",
+    technologies: ["Craft CMS", "Azure Functions", "SQL", "Node.js"],
+    link: "https://wsps.ca/",
+    image: "https://placehold.co/600x400/png?text=WSPS",
   },
 ];
 

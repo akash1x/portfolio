@@ -6,9 +6,9 @@ interface ProjectCardProps {
 
 const ProjectCard = ({ project }: ProjectCardProps) => {
   return (
-    <div className="flex flex-col items-center justify-center bg-purple-bg px-4 py-6 rounded-xl">
+    <div className="flex flex-col bg-green-bright/5 px-4 py-6 rounded-xl">
       <img
-        className="w-50 h-50 rounded-xl"
+        className="w-auto h-50 rounded-xl"
         src={project.image}
         alt="project image"
       />

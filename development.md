@@ -46,3 +46,13 @@
   - **Projects**: Updated layout grid.
 - **Assets**: Replaced `profile.svg` with `profile.png`.
 - **Data**: Updated `HeaderData` and `AboutData` structures in types.
+
+## Theme & Layout Refinements
+
+- **Theme**: Applied dark theme (`--color-navy-blue`) with green accent (`--color-green-bright`).
+- **Layout**: Verified responsive max-width container.
+- **Components**:
+  - **Footer**: Added `Footer` section.
+  - **Experience**: Added interactive selection state.
+  - **Skills**: Implemented hexagon grid layout.
+- **Content**: Updated resume and project details in `data.ts`.

@@ -5,14 +5,13 @@ const Education = () => {
   const { education } = usePortfolio();
 
   return (
-    <div className=" bg-amber-950 flex flex-col justify-center items-center w-full max-w-7xl mx-auto py-12 relative overflow-hidden">
-      <div className="text-center mb-12 relative z-10">
-        <h3>What I have Studied so far</h3>
-        <h1>Education</h1>
+    <div className=" bg-transparent flex flex-col  w-full max-w-7xl mx-auto py-12 relative overflow-hidden">
+      <div className="mb-20 relative z-10">
+        <h1>/ education</h1>
       </div>
 
       {/* Vertical Line */}
-      <div className="absolute top-32 bottom-0 w-1 bg-white left-1/2 transform -translate-x-1/2"></div>
+      <div className="absolute top-32 bottom-0 w-1 bg-slate-gray left-1/2 transform -translate-x-1/2"></div>
 
       <div className="flex flex-col w-full relative">
         {education.map((edu, index) => (
@@ -28,8 +27,8 @@ const Education = () => {
             </div>
 
             {/* Center Node */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-full border-4 border-white bg-purple-bg z-10 flex items-center justify-center">
-              <div className="w-full h-full rounded-full bg-white/20"></div>
+            <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-full border-4 bg-slate-gray z-10 flex items-center justify-center">
+              <div className="w-full h-full rounded-full bg-slate-gray/20"></div>
             </div>
 
             {/* Date Side */}

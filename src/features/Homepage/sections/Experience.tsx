@@ -1,24 +1,32 @@
 import { usePortfolio } from "../hooks/usePortfolio";
 import CompanyCard from "../components/CompanyCard";
 import DetailedCompanyCard from "../components/DetailedCompanyCard";
+import { useState } from "react";
 
 const Experience = () => {
   const { experience } = usePortfolio();
-
+  const [currentExperience, setCurrentExperience] = useState(experience[0]);
   return (
-    <div>
-      <div className=" flex flex-col justify-center items-center">
-        <h3>What I have done so far</h3>
-        <h1>Work Experience</h1>
-      </div>
+    <div className="flex flex-col gap-20">
+      <h1>/ experience</h1>
       <div className="flex justify-between">
-        <div>
+        <div className="gap-4 flex flex-col">
           {experience.map((exp, index) => (
-            <CompanyCard key={index} experience={exp} />
+            <div
+              key={index}
+              onClick={() => setCurrentExperience(exp)}
+              className={`cursor-pointer p-4 border-r-4 transition-all ${
+                currentExperience === exp
+                  ? "border-green-bright bg-green-bright/5"
+                  : "border-transparent hover:bg-white/5"
+              }`}
+            >
+              <CompanyCard experience={exp} />
+            </div>
           ))}
         </div>
-        <div>
-          <DetailedCompanyCard experience={experience[0]} />
+        <div className="flex-1 ml-20">
+          <DetailedCompanyCard experience={currentExperience} />
         </div>
       </div>
     </div>

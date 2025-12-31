@@ -5,8 +5,8 @@ const Skills = () => {
   const { skills } = usePortfolio();
 
   return (
-    <div>
-      <h3>Technical Proficiency</h3>
+    <div className="flex flex-col gap-20">
+      <h1>/ technical skills</h1>
       <SkillList skills={skills} />
     </div>
   );

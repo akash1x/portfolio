@@ -4,10 +4,9 @@ import ProjectCard from "../components/ProjectCard";
 const Projects = () => {
   const { projects } = usePortfolio();
   return (
-    <div>
-      <div className="flex flex-col justify-center items-center">
-        <h3>Innovative Creations</h3>
-        <h1>Projects</h1>
+    <div className="flex flex-col gap-20">
+      <div className="flex flex-col gap-20">
+        <h1>/ pet projects</h1>
       </div>
       <div className="flex  gap-4">
         {projects.map((proj, index) => (
