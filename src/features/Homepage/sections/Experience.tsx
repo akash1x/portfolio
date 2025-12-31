@@ -1,13 +1,13 @@
+import { forwardRef, useState } from "react";
 import { usePortfolio } from "../hooks/usePortfolio";
 import CompanyCard from "../components/CompanyCard";
 import DetailedCompanyCard from "../components/DetailedCompanyCard";
-import { useState } from "react";
 
-const Experience = () => {
+const Experience = forwardRef<HTMLDivElement>((props, ref) => {
   const { experience } = usePortfolio();
   const [currentExperience, setCurrentExperience] = useState(experience[0]);
   return (
-    <div className="flex flex-col gap-20">
+    <div ref={ref} className="flex flex-col gap-20">
       <h1>/ experience</h1>
       <div className="flex justify-between">
         <div className="gap-4 flex flex-col">
@@ -31,6 +31,6 @@ const Experience = () => {
       </div>
     </div>
   );
-};
+});
 
 export default Experience;

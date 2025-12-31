@@ -1,11 +1,15 @@
+import { forwardRef } from "react";
 import { usePortfolio } from "../hooks/usePortfolio";
 import EducationCard from "../components/EducationCard";
 
-const Education = () => {
+const Education = forwardRef<HTMLDivElement>((props, ref) => {
   const { education } = usePortfolio();
 
   return (
-    <div className=" bg-transparent flex flex-col  w-full max-w-7xl mx-auto py-12 relative overflow-hidden">
+    <div
+      ref={ref}
+      className=" bg-transparent flex flex-col  w-full max-w-7xl mx-auto py-12 relative overflow-hidden"
+    >
       <div className="mb-20 relative z-10">
         <h1>/ education</h1>
       </div>
@@ -44,6 +48,6 @@ const Education = () => {
       </div>
     </div>
   );
-};
+});
 
 export default Education;

@@ -62,3 +62,9 @@
 - **Firebase Hosting**:
   - Configured via `firebase.json` and `.firebaserc`.
   - Setup GitHub Action `firebase-hosting-pull-request.yml` for preview channels on PR.
+
+## Functionality
+
+- **Navigation**:
+  - Implemented smooth scrolling to sections (`Home`, `About`, `Experience`, `Education`, `Skills`, `Projects`).
+  - Added `useScrollToSection` hook for managing refs and scroll behavior.

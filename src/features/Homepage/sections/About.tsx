@@ -1,10 +1,11 @@
+import { forwardRef } from "react";
 import { usePortfolio } from "../hooks/usePortfolio";
 
-const About = () => {
+const About = forwardRef<HTMLDivElement>((props, ref) => {
   const { about, profileImg } = usePortfolio();
 
   return (
-    <div>
+    <div ref={ref}>
       <div className="flex flex-col gap-20 justify-center ">
         <h1>{about.introductionTitle}</h1>
         <div className="flex gap-6 justify-center items-center">
@@ -40,6 +41,6 @@ const About = () => {
       </div>
     </div>
   );
-};
+});
 
 export default About;
