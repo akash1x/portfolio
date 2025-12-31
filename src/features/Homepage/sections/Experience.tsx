@@ -3,7 +3,10 @@ import { usePortfolio } from "../hooks/usePortfolio";
 import CompanyCard from "../components/CompanyCard";
 import DetailedCompanyCard from "../components/DetailedCompanyCard";
 
-const Experience = forwardRef<HTMLDivElement>((props, ref) => {
+interface ExperienceProps {
+  ref: React.RefObject<HTMLDivElement>;
+}
+const Experience = ({ ref }: ExperienceProps) => {
   const { experience } = usePortfolio();
   const [currentExperience, setCurrentExperience] = useState(experience[0]);
   return (
@@ -31,6 +34,6 @@ const Experience = forwardRef<HTMLDivElement>((props, ref) => {
       </div>
     </div>
   );
-});
+};
 
 export default Experience;

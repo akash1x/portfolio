@@ -1,8 +1,10 @@
 import { forwardRef } from "react";
 import { usePortfolio } from "../hooks/usePortfolio";
 import ProjectCard from "../components/ProjectCard";
-
-const Projects = forwardRef<HTMLDivElement>((props, ref) => {
+interface ProjectsProps {
+  ref: React.RefObject<HTMLDivElement>;
+}
+const Projects = ({ ref }: ProjectsProps) => {
   const { projects } = usePortfolio();
   return (
     <div ref={ref} className="flex flex-col gap-20">
@@ -16,6 +18,6 @@ const Projects = forwardRef<HTMLDivElement>((props, ref) => {
       </div>
     </div>
   );
-});
+};
 
 export default Projects;

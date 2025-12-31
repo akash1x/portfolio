@@ -2,7 +2,10 @@ import { forwardRef } from "react";
 import { usePortfolio } from "../hooks/usePortfolio";
 import SkillList from "../components/SkillList";
 
-const Skills = forwardRef<HTMLDivElement>((props, ref) => {
+interface SkillsProps {
+  ref: React.RefObject<HTMLDivElement>;
+}
+const Skills = ({ ref }: SkillsProps) => {
   const { skills } = usePortfolio();
 
   return (
@@ -11,6 +14,6 @@ const Skills = forwardRef<HTMLDivElement>((props, ref) => {
       <SkillList skills={skills} />
     </div>
   );
-});
+};
 
 export default Skills;

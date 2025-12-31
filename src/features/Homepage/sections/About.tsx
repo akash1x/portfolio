@@ -1,7 +1,9 @@
 import { forwardRef } from "react";
 import { usePortfolio } from "../hooks/usePortfolio";
-
-const About = forwardRef<HTMLDivElement>((props, ref) => {
+interface AboutProps {
+  ref: React.RefObject<HTMLDivElement>;
+}
+const About = ({ ref }: AboutProps) => {
   const { about, profileImg } = usePortfolio();
 
   return (
@@ -41,6 +43,6 @@ const About = forwardRef<HTMLDivElement>((props, ref) => {
       </div>
     </div>
   );
-});
+};
 
 export default About;

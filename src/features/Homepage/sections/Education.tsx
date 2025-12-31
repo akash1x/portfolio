@@ -2,7 +2,10 @@ import { forwardRef } from "react";
 import { usePortfolio } from "../hooks/usePortfolio";
 import EducationCard from "../components/EducationCard";
 
-const Education = forwardRef<HTMLDivElement>((props, ref) => {
+interface EducationProps {
+  ref: React.RefObject<HTMLDivElement>;
+}
+const Education = ({ ref }: EducationProps) => {
   const { education } = usePortfolio();
 
   return (
@@ -48,6 +51,6 @@ const Education = forwardRef<HTMLDivElement>((props, ref) => {
       </div>
     </div>
   );
-});
+};
 
 export default Education;

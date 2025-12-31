@@ -68,3 +68,4 @@
 - **Navigation**:
   - Implemented smooth scrolling to sections (`Home`, `About`, `Experience`, `Education`, `Skills`, `Projects`).
   - Added `useScrollToSection` hook for managing refs and scroll behavior.
+  - **Refactor**: Replaced `forwardRef` in section components with explicit `ref` prop interfaces (`AboutProps`, `EducationProps`, etc.) for simpler typing and usage.
