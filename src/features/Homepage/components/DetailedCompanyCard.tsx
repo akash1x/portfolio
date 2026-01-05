@@ -6,13 +6,19 @@ interface DetailedCompanyCardProps {
 
 const DetailedCompanyCard = ({ experience }: DetailedCompanyCardProps) => {
   return (
-    <div>
-      <h2>{experience.role}</h2>
-      <p>{experience.company}</p>
-      <p>{experience.period}</p>
-      <ul>
+    <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-1">
+        <h2 className="text-2xl font-bold">
+          {experience.role} @{" "}
+          <span className="text-green-bright">{experience.company}</span>
+        </h2>
+        <p className="uppercase">{experience.period}</p>
+      </div>
+      <ul className="flex flex-col gap-3">
         {experience.description.map((desc, index) => (
-          <li key={index}>{desc}</li>
+          <li className="marker:text-green-bright list-disc" key={index}>
+            {desc}
+          </li>
         ))}
       </ul>
     </div>

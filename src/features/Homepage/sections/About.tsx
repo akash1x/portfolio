@@ -1,7 +1,7 @@
 import { forwardRef } from "react";
 import { usePortfolio } from "../hooks/usePortfolio";
 interface AboutProps {
-  ref: React.RefObject<HTMLDivElement>;
+  ref: React.RefObject<HTMLDivElement | null>;
 }
 const About = ({ ref }: AboutProps) => {
   const { about, profileImg } = usePortfolio();

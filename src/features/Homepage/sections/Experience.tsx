@@ -4,7 +4,7 @@ import CompanyCard from "../components/CompanyCard";
 import DetailedCompanyCard from "../components/DetailedCompanyCard";
 
 interface ExperienceProps {
-  ref: React.RefObject<HTMLDivElement>;
+  ref: React.RefObject<HTMLDivElement | null>;
 }
 const Experience = ({ ref }: ExperienceProps) => {
   const { experience } = usePortfolio();

@@ -3,7 +3,7 @@ import { usePortfolio } from "../hooks/usePortfolio";
 import SkillList from "../components/SkillList";
 
 interface SkillsProps {
-  ref: React.RefObject<HTMLDivElement>;
+  ref: React.RefObject<HTMLDivElement | null>;
 }
 const Skills = ({ ref }: SkillsProps) => {
   const { skills } = usePortfolio();

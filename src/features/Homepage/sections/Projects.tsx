@@ -2,7 +2,7 @@ import { forwardRef } from "react";
 import { usePortfolio } from "../hooks/usePortfolio";
 import ProjectCard from "../components/ProjectCard";
 interface ProjectsProps {
-  ref: React.RefObject<HTMLDivElement>;
+  ref: React.RefObject<HTMLDivElement | null>;
 }
 const Projects = ({ ref }: ProjectsProps) => {
   const { projects } = usePortfolio();

@@ -69,3 +69,10 @@
   - Implemented smooth scrolling to sections (`Home`, `About`, `Experience`, `Education`, `Skills`, `Projects`).
   - Added `useScrollToSection` hook for managing refs and scroll behavior.
   - **Refactor**: Replaced `forwardRef` in section components with explicit `ref` prop interfaces (`AboutProps`, `EducationProps`, etc.) for simpler typing and usage.
+
+## Refinement & Polish
+
+- **Typing**: Updated ref types to `React.RefObject<HTMLDivElement | null>` for better TypeScript compliance.
+- **UI Styling**:
+  - **DetailedCompanyCard**: Improved typography and list styling with theme colors.
+  - **Education**: Adjusted layout and vertical timeline positioning.
