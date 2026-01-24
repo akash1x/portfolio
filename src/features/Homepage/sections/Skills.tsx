@@ -1,13 +1,17 @@
-import { forwardRef } from "react";
-import { usePortfolio } from "../hooks/usePortfolio";
 import SkillList from "../components/SkillList";
-
+import useContentful from "../../../hooks/useContentful";
+import { useEffect, useState } from "react";
 interface SkillsProps {
   ref: React.RefObject<HTMLDivElement | null>;
 }
 const Skills = ({ ref }: SkillsProps) => {
-  const { skills } = usePortfolio();
-
+  const { getTechnicalSkills } = useContentful();
+  const [skills, setSkills] = useState<string[]>([]);
+  useEffect(() => {
+    getTechnicalSkills().then((data) => {
+      setSkills(data);
+    });
+  }, []);
   return (
     <div ref={ref} className="flex flex-col gap-20">
       <h1>/ technical skills</h1>

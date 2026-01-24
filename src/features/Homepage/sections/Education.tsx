@@ -1,5 +1,5 @@
 import { forwardRef } from "react";
-import { usePortfolio } from "../hooks/usePortfolio";
+import { usePortfolio } from "../../../hooks/usePortfolio";
 import EducationCard from "../components/EducationCard";
 
 interface EducationProps {

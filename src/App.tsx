@@ -7,9 +7,7 @@ import Projects from "./features/Homepage/sections/Projects";
 import Skills from "./features/Homepage/sections/Skills";
 import Footer from "./features/Homepage/sections/Footer";
 import "./App.css";
-import { useScrollToSection } from "./features/Homepage/hooks/useScrollToSection";
-import { useEffect } from "react";
-import useContentful from "./hooks/useContentful";
+import { useScrollToSection } from "./hooks/useScrollToSection";
 
 function App() {
   const {
@@ -21,20 +19,7 @@ function App() {
     contactRef,
     scrollToSection,
   } = useScrollToSection();
-  const {
-    getAboutMe,
-    getTechnicalSkills,
-    getEducations,
-    getProjects,
-    getWorkExperiences,
-  } = useContentful();
-  useEffect(() => {
-    getAboutMe().then((data) => console.log("about", data));
-    getTechnicalSkills().then((data) => console.log("skills", data));
-    getEducations().then((data) => console.log("educations", data));
-    getProjects().then((data) => console.log("projects", data));
-    getWorkExperiences().then((data) => console.log("experiences", data));
-  });
+
   return (
     <div className="flex flex-col max-w-[1200px] mx-auto gap-70">
       <Header onScroll={scrollToSection} />

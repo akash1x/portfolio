@@ -1,15 +1,19 @@
 import { forwardRef } from "react";
-import { usePortfolio } from "../hooks/usePortfolio";
+import { usePortfolio } from "../../../hooks/usePortfolio";
 interface AboutProps {
   ref: React.RefObject<HTMLDivElement | null>;
 }
 const About = ({ ref }: AboutProps) => {
   const { about, profileImg } = usePortfolio();
 
+  if (!about) {
+    return <div ref={ref}>Loading...</div>;
+  }
+
   return (
     <div ref={ref}>
       <div className="flex flex-col gap-20 justify-center ">
-        <h1>{about.introductionTitle}</h1>
+        {/* <h1>{about.title}</h1> */}
         <div className="flex gap-6 justify-center items-center">
           <div>
             <img
@@ -32,10 +36,9 @@ const About = ({ ref }: AboutProps) => {
             </div>
           </div>
           <div className="flex flex-col gap-2 pl-10">
-            {about.bioPoints.map((point, index) => (
+            {about.description.map((point, index) => (
               <div key={index} className="flex gap-4">
-                <span className="text-2xl"> {point.emoji}</span>
-                <span className=""> {point.description}</span>
+                <span className=""> {point}</span>
               </div>
             ))}
           </div>

@@ -3,7 +3,7 @@ export interface Skill {
 }
 
 export interface Experience {
-  role: string;
+  designation: string;
   company: string;
   period: string;
   description: string[];

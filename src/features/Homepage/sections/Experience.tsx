@@ -1,5 +1,5 @@
-import { forwardRef, useState } from "react";
-import { usePortfolio } from "../hooks/usePortfolio";
+import { useEffect, useState } from "react";
+import { usePortfolio } from "../../../hooks/usePortfolio";
 import CompanyCard from "../components/CompanyCard";
 import DetailedCompanyCard from "../components/DetailedCompanyCard";
 
@@ -9,6 +9,13 @@ interface ExperienceProps {
 const Experience = ({ ref }: ExperienceProps) => {
   const { experience } = usePortfolio();
   const [currentExperience, setCurrentExperience] = useState(experience[0]);
+  console.log("ssssfgg", experience);
+  if (!experience) {
+    return <div ref={ref}>Loading...</div>;
+  }
+  useEffect(() => {
+    setCurrentExperience(experience[0]);
+  }, [experience]);
   return (
     <div ref={ref} className="flex flex-col gap-20">
       <h1>/ experience</h1>
