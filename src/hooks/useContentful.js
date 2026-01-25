@@ -98,13 +98,16 @@ const useContentful = () => {
             const response = await client.getEntries({
                 content_type: 'petProjects',
             })
-
+            console.log("response", response)
             const sanitizeData = response.items.map((item) => {
                 return item.fields.projectsRef.map((project) => {
                     return {
                         description: project.fields.description.content.map((node) => node.content.map((content) => content.value)),
                         techStack: project.fields.techStack,
                         title: project.fields.title,
+                        image: project?.fields?.image?.fields?.file?.url,
+                        githubLink: project.fields.githubLink,
+                        link: project.fields.link,
                     }
                 })
             })
@@ -116,12 +119,38 @@ const useContentful = () => {
 
     }
 
+    const getResume = async () => {
+
+        try {
+            const response = await client.getEntries({
+                content_type: 'resume',
+            })
+
+            const sanitizeData = response.items.map((item) => {
+                return {
+                    name: item.fields.resume.fields.title,
+                    url: `https:${item.fields.resume.fields.file.url}`,
+                }
+
+            })
+            // return response
+            return sanitizeData[0]
+
+        } catch (error) {
+            console.log(error)
+        }
+
+    }
+
+
+
     return {
         getAboutMe,
         getTechnicalSkills,
         getEducations,
         getProjects,
-        getWorkExperiences
+        getWorkExperiences,
+        getResume
     }
 }
 

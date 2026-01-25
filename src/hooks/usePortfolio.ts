@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { headerData } from "../config/utils/data";
 import useContentful from "./useContentful";
+import { resume } from "react-dom/server";
 
 export const usePortfolio = () => {
   const {
@@ -9,6 +10,7 @@ export const usePortfolio = () => {
     getTechnicalSkills,
     getEducations,
     getProjects,
+    getResume,
   } = useContentful();
 
   const [about, setAbout] = useState<any>(null);
@@ -18,6 +20,7 @@ export const usePortfolio = () => {
   const [projects, setProjects] = useState<any[]>([]);
   const [skills, setSkills] = useState<string[]>([]);
   const [profileImg, setProfileImg] = useState<string>("");
+  const [resume, setResume] = useState<any>(null);
   const fetchData = async () => {
     try {
       const aboutData = await getAboutMe();
@@ -46,6 +49,11 @@ export const usePortfolio = () => {
       if (projectsData) {
         setProjects(projectsData);
       }
+
+      const resumeData = await getResume();
+      if (resumeData) {
+        setResume(resumeData);
+      }
     } catch (error) {
       console.error("Error fetching portfolio data:", error);
     }
@@ -62,5 +70,6 @@ export const usePortfolio = () => {
     projects,
     skills,
     profileImg,
+    resume,
   };
 };

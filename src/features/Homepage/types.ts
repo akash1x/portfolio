@@ -11,16 +11,17 @@ export interface Experience {
 
 export interface Education {
   degree: string;
-  institution: string;
+  collge: string;
   period: string;
 }
 
 export interface Project {
   title: string;
   description: string;
-  technologies?: string[];
+  techStack?: string[];
   link?: string;
   image?: string;
+  githubLink?: string;
 }
 
 export interface AboutData {

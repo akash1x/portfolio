@@ -14,8 +14,8 @@ const SkillList = ({ skills }: SkillListProps) => {
           <div
             key={index}
             className={`relative group w-28 h-32 transition-all duration-300 hover:scale-105 filter hover:drop-shadow-[0_0_10px_#64ffda]
-              ${isOffsetRow && isFirstInRow ? "ml-15" : ""} ${
-                row > 0 ? "-mt-8" : ""
+              ${isOffsetRow && isFirstInRow ? "md:ml-15" : ""} ${
+                row > 0 ? "md:-mt-8" : ""
               }`}
           >
             {/* OUTER HEXAGON: This serves as the "Border" */}
