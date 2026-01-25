@@ -7,7 +7,7 @@ import Projects from "./features/Homepage/sections/Projects";
 import Skills from "./features/Homepage/sections/Skills";
 import Footer from "./features/Homepage/sections/Footer";
 import "./App.css";
-import { useScrollToSection } from "./features/Homepage/hooks/useScrollToSection";
+import { useScrollToSection } from "./hooks/useScrollToSection";
 
 function App() {
   const {
@@ -21,7 +21,7 @@ function App() {
   } = useScrollToSection();
 
   return (
-    <div className="flex flex-col max-w-[1200px] mx-auto gap-70">
+    <div className="flex flex-col max-w-[1200px] mx-auto gap-20 md:gap-40 lg:gap-70 px-6 md:px-10 lg:px-0 overflow-x-hidden">
       <Header onScroll={scrollToSection} />
       <About ref={aboutRef} />
       <Experience ref={experienceRef} />
@@ -35,3 +35,6 @@ function App() {
 }
 
 export default App;
+function getAboutMe() {
+  throw new Error("Function not implemented.");
+}

@@ -5,9 +5,12 @@ interface CompanyCardProps {
 }
 
 const CompanyCard = ({ experience }: CompanyCardProps) => {
+  if (!experience) {
+    return <div>Loading...</div>;
+  }
   return (
     <div>
-      <h2>{experience.role}</h2>
+      <h2>{experience.designation}</h2>
       <p>{experience.company}</p>
     </div>
   );

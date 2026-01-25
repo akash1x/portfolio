@@ -1,7 +1,5 @@
-import { Skill } from "../types";
-
 interface SkillListProps {
-  skills: Skill[];
+  skills: string[];
 }
 
 const SkillList = ({ skills }: SkillListProps) => {
@@ -16,9 +14,9 @@ const SkillList = ({ skills }: SkillListProps) => {
           <div
             key={index}
             className={`relative group w-28 h-32 transition-all duration-300 hover:scale-105 filter hover:drop-shadow-[0_0_10px_#64ffda]
-              ${isOffsetRow && isFirstInRow ? "ml-15" : ""} ${
-              row > 0 ? "-mt-8" : ""
-            }`}
+              ${isOffsetRow && isFirstInRow ? "md:ml-15" : ""} ${
+                row > 0 ? "md:-mt-8" : ""
+              }`}
           >
             {/* OUTER HEXAGON: This serves as the "Border" */}
             <div
@@ -30,7 +28,7 @@ const SkillList = ({ skills }: SkillListProps) => {
                 className="absolute inset-[4px] bg-green-bright/5 flex items-center justify-center text-white font-medium 
                    [clip-path:polygon(50%_0%,100%_25%,100%_75%,50%_100%,0%_75%,0%_25%)]"
               >
-                {skill.name}
+                {skill}
               </div>
             </div>
           </div>
