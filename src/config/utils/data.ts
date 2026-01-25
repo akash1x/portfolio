@@ -19,6 +19,10 @@ export const headerData: HeaderData = {
     "Projects",
     "Contact",
   ],
+  socialLinks: {
+    github: "https://github.com/akash1x",
+    linkedin: "https://www.linkedin.com/in/akash-dohare-54b061141/",
+  },
 };
 
 export const aboutData: AboutData = {

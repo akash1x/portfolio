@@ -37,4 +37,8 @@ export interface AboutData {
 export interface HeaderData {
   name: string;
   navItems: string[];
+  socialLinks: {
+    github: string;
+    linkedin: string;
+  };
 }
