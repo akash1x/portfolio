@@ -1,6 +1,7 @@
 import { forwardRef } from "react";
 import { usePortfolio } from "../../../hooks/usePortfolio";
 import EducationCard from "../components/EducationCard";
+import Title from "../../../components/Title";
 
 interface EducationProps {
   ref: React.RefObject<HTMLDivElement | null>;
@@ -14,7 +15,7 @@ const Education = ({ ref }: EducationProps) => {
       className=" bg-transparent flex flex-col  w-full max-w-7xl mx-auto py-12 relative overflow-hidden gap-20"
     >
       <div className="relative z-10">
-        <h1>/ education</h1>
+        <Title title="/ education" />
       </div>
       <div>
         {/* Vertical Line */}

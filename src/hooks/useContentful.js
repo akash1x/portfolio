@@ -18,7 +18,7 @@ const useContentful = () => {
             const sanitizeData = response.items.map((item) => {
                 return {
                     title: item.fields.title,
-                    description: item.fields.description.content.map((node) => node.content.map((content) => content.value)),
+                    description: item.fields.description,
                     profileImage: item.fields.profileImage.fields.file.url,
                 }
             })

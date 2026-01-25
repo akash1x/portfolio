@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { usePortfolio } from "../../../hooks/usePortfolio";
 import CompanyCard from "../components/CompanyCard";
 import DetailedCompanyCard from "../components/DetailedCompanyCard";
+import Title from "../../../components/Title";
 
 interface ExperienceProps {
   ref: React.RefObject<HTMLDivElement | null>;
@@ -18,7 +19,7 @@ const Experience = ({ ref }: ExperienceProps) => {
   }, [experience]);
   return (
     <div ref={ref} className="flex flex-col gap-20">
-      <h1>/ experience</h1>
+      <Title title="/ experience" />
       <div className="flex justify-between">
         <div className="gap-4 flex flex-col">
           {experience.map((exp, index) => (
