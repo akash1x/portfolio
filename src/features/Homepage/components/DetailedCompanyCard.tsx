@@ -17,7 +17,7 @@ const DetailedCompanyCard = ({ experience }: DetailedCompanyCardProps) => {
         </h2>
         <p className="uppercase">{experience.period}</p>
       </div>
-      <ul className="flex flex-col gap-3">
+      <ul className="flex flex-col gap-3 ml-5">
         {experience.description.map((desc, index) => (
           <li className="marker:text-green-bright list-disc" key={index}>
             {desc}

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { usePortfolio } from "../../../hooks/usePortfolio";
 import CompanyCard from "../components/CompanyCard";
 import DetailedCompanyCard from "../components/DetailedCompanyCard";
@@ -40,8 +41,20 @@ const Experience = ({ ref }: ExperienceProps) => {
             </div>
           ))}
         </div>
-        <div className="flex-1 ml-0 md:ml-20 w-full">
-          <DetailedCompanyCard experience={currentExperience} />
+        <div className="flex-1 ml-0 md:ml-20 w-full overflow-hidden">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={
+                currentExperience ? JSON.stringify(currentExperience) : "empty"
+              }
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.2 }}
+            >
+              <DetailedCompanyCard experience={currentExperience} />
+            </motion.div>
+          </AnimatePresence>
         </div>
       </div>
     </div>
