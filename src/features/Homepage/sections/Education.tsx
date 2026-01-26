@@ -12,14 +12,14 @@ const Education = ({ ref }: EducationProps) => {
   return (
     <div
       ref={ref}
-      className=" bg-transparent flex flex-col  w-full max-w-7xl mx-auto py-12 relative overflow-hidden gap-20"
+      className=" bg-transparent flex flex-col min-h-screen w-full max-w-7xl mx-auto py-20 relative overflow-hidden gap-20"
     >
       <div className="relative z-10">
         <Title title="/ education" />
       </div>
       <div>
         {/* Vertical Line */}
-        <div className="absolute top-50 bottom-0 w-1 bg-slate-gray left-1/2 transform -translate-x-1/2 hidden md:block"></div>
+        <div className="absolute top-56 bottom-60 w-1 bg-slate-gray left-1/2 transform -translate-x-1/2 hidden md:block"></div>
 
         <div className="flex flex-col w-full relative">
           {education.map((edu, index) => (

@@ -2,7 +2,8 @@ import { forwardRef, useEffect } from "react";
 import { usePortfolio } from "../../../hooks/usePortfolio";
 import RichTextRenderer from "../../../components/RichTextRenderer";
 import Title from "../../../components/Title";
-import ParticleImage from "../components/ParticleImage";
+
+import Intro from "./Intro";
 interface AboutProps {
   ref: React.RefObject<HTMLDivElement | null>;
 }
@@ -14,7 +15,7 @@ const About = ({ ref }: AboutProps) => {
   }
 
   return (
-    <div ref={ref}>
+    <div ref={ref} className="min-h-screen flex flex-col py-20">
       <div className="flex flex-col gap-20 justify-center ">
         <Title title={about.title} />
         <div className="flex flex-col md:flex-row gap-6 justify-center items-center md:items-start">

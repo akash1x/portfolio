@@ -8,7 +8,7 @@ interface ProjectsProps {
 const Projects = ({ ref }: ProjectsProps) => {
   const { projects } = usePortfolio();
   return (
-    <div ref={ref} className="flex flex-col gap-20">
+    <div ref={ref} className="min-h-screen flex flex-col py-20 gap-20">
       <Title title="/ projects" />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map((proj, index) => (

@@ -7,6 +7,7 @@ import {
   FaBars,
   FaTimes,
 } from "react-icons/fa";
+import { IoMail } from "react-icons/io5";
 interface HeaderProps {
   onScroll: (section: string) => void;
 }
@@ -15,6 +16,11 @@ const Header = ({ onScroll }: HeaderProps) => {
   const { header, resume } = usePortfolio();
 
   const socialLinks = [
+    {
+      name: "Email",
+      icon: <IoMail />,
+      url: "mailto:akash1x25@gmail.com",
+    },
     {
       name: "GitHub",
       icon: <FaGithub />,

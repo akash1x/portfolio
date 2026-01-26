@@ -10,7 +10,6 @@ interface ExperienceProps {
 const Experience = ({ ref }: ExperienceProps) => {
   const { experience } = usePortfolio();
   const [currentExperience, setCurrentExperience] = useState(experience[0]);
-  console.log("ssssfgg", experience);
   if (!experience) {
     return <div ref={ref}>Loading...</div>;
   }
@@ -18,7 +17,7 @@ const Experience = ({ ref }: ExperienceProps) => {
     setCurrentExperience(experience[0]);
   }, [experience]);
   return (
-    <div ref={ref} className="flex flex-col gap-20">
+    <div ref={ref} className="min-h-screen flex flex-col py-20 gap-20">
       <Title title="/ experience" />
       <div className="flex flex-col md:flex-row justify-between gap-8 md:gap-0">
         <div className="flex flex-row md:flex-col gap-4 overflow-x-auto md:overflow-visible pb-4 md:pb-0 w-full md:w-auto">

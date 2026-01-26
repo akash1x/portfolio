@@ -11,6 +11,8 @@ export const usePortfolio = () => {
     getEducations,
     getProjects,
     getResume,
+    getIntro,
+    getContact,
   } = useContentful();
 
   const [about, setAbout] = useState<any>(null);
@@ -21,6 +23,8 @@ export const usePortfolio = () => {
   const [skills, setSkills] = useState<string[]>([]);
   const [profileImg, setProfileImg] = useState<string>("");
   const [resume, setResume] = useState<any>(null);
+  const [intro, setIntro] = useState<any>("");
+  const [contact, setContact] = useState<any>();
   const fetchData = async () => {
     try {
       const aboutData = await getAboutMe();
@@ -54,6 +58,16 @@ export const usePortfolio = () => {
       if (resumeData) {
         setResume(resumeData);
       }
+
+      const introData = await getIntro();
+      if (introData) {
+        setIntro(introData);
+      }
+
+      const contactData = await getContact();
+      if (contactData) {
+        setContact(contactData);
+      }
     } catch (error) {
       console.error("Error fetching portfolio data:", error);
     }
@@ -71,5 +85,7 @@ export const usePortfolio = () => {
     skills,
     profileImg,
     resume,
+    intro,
+    contact,
   };
 };

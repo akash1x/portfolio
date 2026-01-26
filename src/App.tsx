@@ -8,6 +8,7 @@ import Skills from "./features/Homepage/sections/Skills";
 import Footer from "./features/Homepage/sections/Footer";
 import "./App.css";
 import { useScrollToSection } from "./hooks/useScrollToSection";
+import Intro from "./features/Homepage/sections/Intro";
 
 function App() {
   const {
@@ -21,14 +22,15 @@ function App() {
   } = useScrollToSection();
 
   return (
-    <div className="flex flex-col max-w-[1200px] mx-auto gap-20 md:gap-40 lg:gap-70 px-6 md:px-10 lg:px-0 overflow-x-hidden">
+    <div className="flex flex-col max-w-[1200px] mx-auto px-6 md:px-10 lg:px-0 overflow-x-hidden">
       <Header onScroll={scrollToSection} />
+      <Intro />
       <About ref={aboutRef} />
       <Experience ref={experienceRef} />
       <Education ref={educationRef} />
       <Skills ref={skillsRef} />
       <Projects ref={projectsRef} />
-      {/* <Contact /> */}
+      <Contact ref={contactRef} />
       <Footer />
     </div>
   );

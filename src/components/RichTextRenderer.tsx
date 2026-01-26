@@ -25,7 +25,7 @@ const RichTextRenderer = ({ document }: RichTextRendererProps) => {
         <p className="text-[#8892b0] mb-4 leading-relaxed">{children}</p>
       ),
       [BLOCKS.UL_LIST]: (node: any, children: ReactNode) => (
-        <ul className="grid grid-cols-[repeat(2,minmax(140px,200px))] list-disc pl-5 pt-2 mb-2 text-[#8892b0] text-sm">
+        <ul className="grid grid-cols-[repeat(2,minmax(140px,200px))] list-disc pl-5 text-[#8892b0] text-sm">
           {children}
         </ul>
       ),
@@ -33,7 +33,7 @@ const RichTextRenderer = ({ document }: RichTextRendererProps) => {
         <ol className="list-decimal pl-5 mb-4 text-[#8892b0]">{children}</ol>
       ),
       [BLOCKS.LIST_ITEM]: (node: any, children: ReactNode) => (
-        <li className="mb-1">{children}</li>
+        <li className="mb-1 marker:text-green-bright list-disc">{children}</li>
       ),
       [BLOCKS.QUOTE]: (node: any, children: ReactNode) => (
         <blockquote className="border-l-4 border-[#64ffda] pl-4 italic text-[#8892b0] mb-4">
