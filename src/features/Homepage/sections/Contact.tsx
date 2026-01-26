@@ -9,9 +9,9 @@ interface ContactProps {
 
 const Contact = ({ ref }: ContactProps) => {
   const { contact } = usePortfolio();
-  if (!contact) {
-    return <div>Loading...</div>;
-  }
+
+  if (!contact) return null;
+
   return (
     <div ref={ref} className="min-h-screen flex flex-col py-20 gap-20">
       <Title title="/ contact" />
