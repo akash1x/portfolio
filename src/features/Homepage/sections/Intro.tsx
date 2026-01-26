@@ -2,6 +2,9 @@ import { IoMail } from "react-icons/io5";
 import { usePortfolio } from "../../../hooks/usePortfolio";
 const Intro = () => {
   const { intro } = usePortfolio();
+
+  if (!intro || typeof intro !== "object") return null;
+
   return (
     <div className="min-h-screen flex flex-col justify-center">
       <div className="flex">

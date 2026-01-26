@@ -9,6 +9,9 @@ import Footer from "./features/Homepage/sections/Footer";
 import "./App.css";
 import { useScrollToSection } from "./hooks/useScrollToSection";
 import Intro from "./features/Homepage/sections/Intro";
+import { usePortfolio } from "./hooks/usePortfolio";
+
+import SkeletonLoader from "./components/SkeletonLoader";
 
 function App() {
   const {
@@ -20,6 +23,12 @@ function App() {
     contactRef,
     scrollToSection,
   } = useScrollToSection();
+
+  const { isLoading } = usePortfolio();
+
+  if (isLoading) {
+    return <SkeletonLoader />;
+  }
 
   return (
     <div className="flex flex-col max-w-[1200px] mx-auto px-6 md:px-10 lg:px-0 overflow-x-hidden">

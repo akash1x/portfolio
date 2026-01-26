@@ -9,13 +9,18 @@ interface ExperienceProps {
 }
 const Experience = ({ ref }: ExperienceProps) => {
   const { experience } = usePortfolio();
-  const [currentExperience, setCurrentExperience] = useState(experience[0]);
-  if (!experience) {
-    return <div ref={ref}>Loading...</div>;
-  }
+  const [currentExperience, setCurrentExperience] = useState<any>(null);
+
   useEffect(() => {
-    setCurrentExperience(experience[0]);
+    if (experience && experience.length > 0) {
+      setCurrentExperience(experience[0]);
+    }
   }, [experience]);
+
+  if (!experience || experience.length === 0) {
+    return null;
+  }
+
   return (
     <div ref={ref} className="min-h-screen flex flex-col py-20 gap-20">
       <Title title="/ experience" />

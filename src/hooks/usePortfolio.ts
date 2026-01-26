@@ -25,51 +25,67 @@ export const usePortfolio = () => {
   const [resume, setResume] = useState<any>(null);
   const [intro, setIntro] = useState<any>("");
   const [contact, setContact] = useState<any>();
+  const [isLoading, setIsLoading] = useState(true);
+
   const fetchData = async () => {
+    setIsLoading(true);
     try {
-      const aboutData = await getAboutMe();
+      const [
+        aboutData,
+        workExperienceData,
+        technicalSkillsData,
+        educationData,
+        projectsData,
+        resumeData,
+        introData,
+        contactData,
+      ] = await Promise.all([
+        getAboutMe(),
+        getWorkExperiences(),
+        getTechnicalSkills(),
+        getEducations(),
+        getProjects(),
+        getResume(),
+        getIntro(),
+        getContact(),
+      ]);
+
       if (aboutData) {
         setAbout(aboutData);
         setProfileImg(aboutData.profileImage);
       }
 
-      const workExperienceData = await getWorkExperiences();
-
       if (workExperienceData) {
         setExperience(workExperienceData);
       }
 
-      const technicalSkillsData = await getTechnicalSkills();
       if (technicalSkillsData) {
         setSkills(technicalSkillsData as string[]);
       }
 
-      const educationData = await getEducations();
       if (educationData) {
         setEducation(educationData);
       }
 
-      const projectsData = await getProjects();
       if (projectsData) {
         setProjects(projectsData);
       }
 
-      const resumeData = await getResume();
       if (resumeData) {
         setResume(resumeData);
       }
 
-      const introData = await getIntro();
       if (introData) {
         setIntro(introData);
       }
 
-      const contactData = await getContact();
       if (contactData) {
         setContact(contactData);
       }
     } catch (error) {
       console.error("Error fetching portfolio data:", error);
+    } finally {
+      setIsLoading(false);
     }
   };
   useEffect(() => {
@@ -87,5 +103,6 @@ export const usePortfolio = () => {
     resume,
     intro,
     contact,
+    isLoading,
   };
 };

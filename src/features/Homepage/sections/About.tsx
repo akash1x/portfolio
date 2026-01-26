@@ -10,9 +10,7 @@ interface AboutProps {
 const About = ({ ref }: AboutProps) => {
   const { about, profileImg } = usePortfolio();
 
-  if (!about) {
-    return <div ref={ref}>Loading...</div>;
-  }
+  if (!about) return null;
 
   return (
     <div ref={ref} className="min-h-screen flex flex-col py-20">
