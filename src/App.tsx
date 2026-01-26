@@ -12,6 +12,7 @@ import Intro from "./features/Homepage/sections/Intro";
 import { usePortfolio } from "./hooks/usePortfolio";
 
 import SkeletonLoader from "./components/SkeletonLoader";
+import { Reveal } from "./components/Reveal";
 
 function App() {
   const {
@@ -33,13 +34,27 @@ function App() {
   return (
     <div className="flex flex-col max-w-[1200px] mx-auto px-6 md:px-10 lg:px-0 overflow-x-hidden">
       <Header onScroll={scrollToSection} />
-      <Intro />
-      <About ref={aboutRef} />
-      <Experience ref={experienceRef} />
-      <Education ref={educationRef} />
-      <Skills ref={skillsRef} />
-      <Projects ref={projectsRef} />
-      <Contact ref={contactRef} />
+      <Reveal width="100%">
+        <Intro />
+      </Reveal>
+      <Reveal width="100%">
+        <About ref={aboutRef} />
+      </Reveal>
+      <Reveal width="100%">
+        <Experience ref={experienceRef} />
+      </Reveal>
+      <Reveal width="100%">
+        <Education ref={educationRef} />
+      </Reveal>
+      <Reveal width="100%">
+        <Skills ref={skillsRef} />
+      </Reveal>
+      <Reveal width="100%">
+        <Projects ref={projectsRef} />
+      </Reveal>
+      <Reveal width="100%">
+        <Contact ref={contactRef} />
+      </Reveal>
       <Footer />
     </div>
   );
