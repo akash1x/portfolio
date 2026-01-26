@@ -136,6 +136,17 @@ const Header = ({ onScroll }: HeaderProps) => {
                 title={link.name}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={
+                  link.name === "Email"
+                    ? (e) => {
+                        setTimeout(() => {
+                          alert(
+                            "If nothing opened, email me at akash1x25@gmail.com",
+                          );
+                        }, 500);
+                      }
+                    : undefined
+                }
               >
                 {link.icon}
               </a>

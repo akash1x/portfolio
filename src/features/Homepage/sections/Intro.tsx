@@ -19,12 +19,17 @@ const Intro = () => {
       <div>
         <p>{intro.description}</p>
       </div>
-      <button
-        onClick={() => (window.location.href = "mailto:akash1x25@gmail.com")}
-        className="outline outline-[#64ffda] mt-7 ml-1 max-w-[120px] flex justify-center items-center gap-2 rounded-lg px-4 py-2"
+      <a
+        href="mailto:akash1x25@gmail.com"
+        className="cursor-pointer outline outline-[#64ffda] mt-7 ml-1 max-w-[120px] flex justify-center items-center gap-2 rounded-lg px-4 py-2"
+        onClick={(e) => {
+          setTimeout(() => {
+            alert("If nothing opened, email me at akash1x25@gmail.com");
+          }, 500);
+        }}
       >
         <IoMail className="text-[#64ffda]" /> Say Hi!
-      </button>
+      </a>
     </div>
   );
 };
