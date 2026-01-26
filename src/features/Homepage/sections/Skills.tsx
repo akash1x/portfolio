@@ -10,11 +10,13 @@ const Skills = ({ ref }: SkillsProps) => {
   const [skills, setSkills] = useState<string[]>([]);
   useEffect(() => {
     getTechnicalSkills().then((data) => {
-      setSkills(data);
+      if (Array.isArray(data)) {
+        setSkills(data as string[]);
+      }
     });
   }, []);
   return (
-    <div ref={ref} className="flex flex-col gap-20">
+    <div ref={ref} className="min-h-screen flex flex-col py-20 gap-20">
       <Title title="/ technical skills" />
       <SkillList skills={skills} />
     </div>

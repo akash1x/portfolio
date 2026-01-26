@@ -47,7 +47,6 @@ const useContentful = () => {
                 })
             })
             return sanitizeData[0]
-            // return response
         } catch (error) {
             console.log(error)
         }
@@ -63,7 +62,6 @@ const useContentful = () => {
 
             const sanitizeData = response.items.map((item) => item.fields.skills)
             return sanitizeData[0]
-            // return response
         } catch (error) {
             console.log(error)
         }
@@ -98,7 +96,6 @@ const useContentful = () => {
             const response = await client.getEntries({
                 content_type: 'petProjects',
             })
-            console.log("response", response)
             const sanitizeData = response.items.map((item) => {
                 return item.fields.projectsRef.map((project) => {
                     return {
@@ -112,7 +109,6 @@ const useContentful = () => {
                 })
             })
             return sanitizeData[0]
-            // return response
         } catch (error) {
             console.log(error)
         }
@@ -133,7 +129,49 @@ const useContentful = () => {
                 }
 
             })
-            // return response
+            return sanitizeData[0]
+
+        } catch (error) {
+            console.log(error)
+        }
+
+    }
+
+    const getIntro = async () => {
+
+        try {
+            const response = await client.getEntries({
+                content_type: 'intro',
+            })
+            const sanitizeData = response.items.map((item) => {
+                return {
+                    description: item.fields.description,
+                }
+
+            })
+            return sanitizeData[0]
+
+        } catch (error) {
+            console.log(error)
+        }
+
+    }
+    const getContact = async () => {
+
+        try {
+            const response = await client.getEntries({
+                content_type: 'contact',
+            })
+            const sanitizeData = response.items.map((item) => {
+                return {
+                    email: item.fields.email,
+                    linkedin: item.fields.linkedin,
+                    github: item.fields.github,
+                    phoneNumber: item.fields.phoneNumber,
+                    message: item.fields.message,
+                }
+
+            })
             return sanitizeData[0]
 
         } catch (error) {
@@ -150,7 +188,9 @@ const useContentful = () => {
         getEducations,
         getProjects,
         getWorkExperiences,
-        getResume
+        getResume,
+        getIntro,
+        getContact
     }
 }
 
